@@ -93,6 +93,9 @@ function shiftItem(entry, direction) {
 
   updateList();
 }
+
+
+// most importaint function, creates and updates list items
 function updateList() {
   let text = "<ul>";
   // creates new list element for each entry in listEntries array (with custom id)
@@ -156,7 +159,7 @@ function updateList() {
   localStorage.setItem("entryStyle", JSON.stringify(entryStyle));
 }
 
-// event to get enter press to add input value into list
+// event to get enter-press, to add input value into list
 input = document
   .getElementById("input")
   .addEventListener("keydown", ({ key }) => {
@@ -165,5 +168,3 @@ input = document
       document.getElementById("input").value = "";
     }
   });
-
-// most importaint function, creates and updates list items
